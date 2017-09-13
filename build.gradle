@@ -1,0 +1,32 @@
+group 'com.teamtreehouse'
+version '1.0-SNAPSHOT'
+
+buildscript{
+    repositories{
+        mavenCentral()
+    }
+    dependencies{
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.6.RELEASE'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+//thymeleaf: 在HTML里面ACCESS JAVA OBJECTS
+//write html while including place holders for data that will come from java objects
+//Notice: thymleaf expects html templates to be xml-compliant
+//metaTag is html compliant but not xml compliant <=> every tag must have associated closing tag "/"
+//or must be self-closing.
+
+//thyleaf grammar:
+//th:href; th:src; th:class; th:text; th:each (looping)
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+}
